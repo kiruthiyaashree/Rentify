@@ -13,6 +13,10 @@ const SellerDetails = () => {
 
     return (
         <>
+        <br/>
+        <br/>
+        <br/>
+
             <div className="mx-13">
                 <div className="flex justify-center">
                 <div className="grid grid-cols-3 gap-10 w-[75%]">
@@ -21,7 +25,9 @@ const SellerDetails = () => {
                         {
                             return (
                                 <div key={index} className="border rounded-lg flex justify-center items-center border-gray-400">
+                    
                             <div className='p-4 '>
+                            <p className="flex justify-center font-semibold">{prop.firstname}</p>
                                 <img src={prop.image} className='h-[15em]' alt="reloading page"/>
                                 <br/>
     
@@ -43,9 +49,6 @@ const SellerDetails = () => {
                                 <br/>
                                 <hr className='border border-t-2 border-gray-400 border-dotted'/>
                                 <br/>
-                                <div className='flex justify-around items-center'>
-                                    <button onClick={(e)=>handleInterested(prop._id)} className="border px-6 py-2 rounded-md border-blue-800 text-blue-800">Interested</button>
-                                </div>
                                 </div>
                             </div>
                             )

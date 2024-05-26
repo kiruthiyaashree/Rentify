@@ -27,7 +27,7 @@ const BuyerHome=()=>
 
         const handleInterested=async(propId)=>
             {
-                console.log(propId);
+                // console.log(propId);
                 try{
                     const res = await axios.get("http://localhost:6700/sellerdetails", {
                     params: {
@@ -35,7 +35,7 @@ const BuyerHome=()=>
                     }
                     
                 });
-                console.log(res.data.details);
+                // console.log(res.data.details);
                 localStorage.setItem('sellerDetails', JSON.stringify(res.data.details));
                 // setInterestedList(res.data.details);
                 navigate("/sellerdetails");

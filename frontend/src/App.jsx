@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Landing from './components/Landing';
 import SellerDetails from './components/SellerDetails';
+import Profile from './components/Profile';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path='/signin' element={<Login/>}/>
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/sellerdetails' element={<SellerDetails/>}/>
+          <Route path='/profile' element={<Profile/>}/>
 
 
         </Routes>

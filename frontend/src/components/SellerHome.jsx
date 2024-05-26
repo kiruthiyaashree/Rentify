@@ -7,6 +7,7 @@ import PropertyList from "./PropertyList";
 import { useNavigate } from "react-router-dom";
 
 const SellerHome = () => {
+  const navigate = useNavigate();
   const [isPopupOpenForAdd, setIsPopupOpenforAdd] = useState(false);
   const firstname = JSON.parse(localStorage.getItem("firstname"));
 
@@ -18,6 +19,10 @@ const SellerHome = () => {
     setIsPopupOpenforAdd(false);
   };
 
+  const handleProfilePhoto=()=>
+    {
+      navigate('/profile');
+    }
   return (
     <>
 
@@ -34,9 +39,12 @@ const SellerHome = () => {
             >
               +Add
             </button>
-
-
+<br/>
+            <div className="mx-4">
+        <button type="submit"  className="px-12 py-2 font-bold text-white bg-blue-800 rounded-md " onClick={()=>handleProfilePhoto()}>Add Profile</button>
+      </div>
           </div>
+          
         </div>
 
       {isPopupOpenForAdd && <Popup firstname ={firstname} closePopup={handleClosePopup} />} 
@@ -44,7 +52,7 @@ const SellerHome = () => {
             <br/>
             <br/>
             <br/>
-
+      
       <PropertyList/>
     </>
   );
